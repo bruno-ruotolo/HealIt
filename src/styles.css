@@ -140,3 +140,9 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+.mat-form-field-flex {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}

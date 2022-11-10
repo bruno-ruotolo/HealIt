@@ -11,7 +11,7 @@ export interface ClinicsInfos {
   cidade: string;
   estado: string;
   status: string;
-  preco: number;
+  preco: string;
   atendimento: Atendimento;
 }
 

@@ -16,6 +16,7 @@
       type="text"
       name="cnpj"
       [(ngModel)]="cnpj"
+      mask="00.000.000/0000-00"
     />
 
     <input
@@ -34,6 +35,7 @@
       type="text"
       name="telefone"
       [(ngModel)]="telefone"
+      mask="(00) 0000-00000"
     />
 
     <input
@@ -43,6 +45,7 @@
       type="text"
       name="cep"
       [(ngModel)]="cep"
+      mask="00000-000"
     />
 
     <input
@@ -88,16 +91,16 @@
       type="text"
       name="estado"
       [(ngModel)]="estado"
+      mask="AA"
     />
 
-    <input
-      class="form-field_input"
-      id="status"
-      placeholder="Status"
-      type="text"
-      name="status"
-      [(ngModel)]="status"
-    />
+    <mat-form-field class="select">
+      <mat-label>Selecione o Status</mat-label>
+      <mat-select [(ngModel)]="status" name="status">
+        <mat-option value="Ativo">Ativo</mat-option>
+        <mat-option value="Inativo">Inativo</mat-option>
+      </mat-select>
+    </mat-form-field>
 
     <input
       class="form-field_input"
@@ -105,10 +108,13 @@
       placeholder="Preco"
       type="text"
       name="preco"
+      pattern="\d"
+      required
+      pattern="\d"
       [(ngModel)]="preco"
     />
 
-    <div>
+    <div class="status-field">
       <input
         class="form-field_input"
         id="inicio"
@@ -116,18 +122,20 @@
         type="text"
         name="inicio"
         [(ngModel)]="inicio"
+        mask="00:00"
       />
 
       <input
         class="form-field_input"
         id="fim"
-        placeholder="Horario de Fim do Atendimento"
+        placeholder="Horario do Fim do Atendimento"
         type="text"
         name="fim"
         [(ngModel)]="fim"
+        mask="00:00"
       />
     </div>
-    <button type="submit">Adicionar</button>
+    <button class="add-clinic-button" type="submit">Adicionar</button>
   </form>
 </section>
 

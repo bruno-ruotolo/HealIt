@@ -19,9 +19,11 @@ export class AddClinicComponent implements OnInit {
   cidade!: string;
   estado!: string;
   status!: string;
-  preco!: number;
+  preco!: string;
   inicio!: string;
   fim!: string;
+
+  selected: string = 'Ativo';
 
   constructor(private addClinicService: ClinicService) {}
 
@@ -39,7 +41,10 @@ export class AddClinicComponent implements OnInit {
       estado: this.estado,
       status: this.status,
       preco: this.preco,
-      atendimento: { inicio: this.inicio, fim: this.fim },
+      atendimento: {
+        inicio: this.inicio,
+        fim: this.fim,
+      },
     };
     this.addClinicService.add(addClinicData);
     console.log('Solicitada nova adição');

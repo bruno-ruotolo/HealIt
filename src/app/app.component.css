@@ -1,5 +1,5 @@
 main {
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 0 70px;
 }
 
@@ -17,8 +17,7 @@ header {
 }
 
 header h1 {
-  position: relative;
-  right: 0;
+  position: absolute;
   font-family: "Satisfy", serif;
   font-style: normal;
   font-weight: 400;
@@ -31,7 +30,7 @@ header h1 {
 header h2 {
   position: absolute;
   left: 0;
-  right: 0;
+  right: 7%;
   margin: 0 auto;
   font-family: "Arvo", serif;
   font-style: normal;
@@ -49,4 +48,31 @@ header h2:hover {
   transform: translate(-3px, -3px);
 
   filter: drop-shadow(3px 3px 2px #000000);
+}
+
+.add-clinic-button {
+  position: absolute;
+  border: none;
+  background-color: #e76076;
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+.add-clinic-button:hover {
+  transition: 0.5s;
+  transform: translate(-3px, -3px);
+
+  filter: drop-shadow(3px 3px 2px #000000);
+}
+
+.active {
+  display: none;
 }

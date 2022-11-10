@@ -1,11 +1,12 @@
 import { ClinicsInfos } from '../models/clinics.model';
-import { Injectable, LOCALE_ID } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ClinicService {
-  constructor() {}
+  constructor(private router: Router) {}
 
   get() {
     const clinicsData = JSON.parse(localStorage.getItem('clinics') as string);
@@ -49,13 +50,25 @@ export class ClinicService {
     const newClinicInfos: ClinicsInfos = {
       ...clinicInfo,
       id: generateNewIdNumber,
+      preco: clinicInfo.preco.replace(',', '.'),
+      atendimento: {
+        inicio: `${clinicInfo.atendimento.inicio.slice(
+          0,
+          2
+        )}:${clinicInfo.atendimento.inicio.slice(2)}`,
+        fim: `${clinicInfo.atendimento.fim.slice(
+          0,
+          2
+        )}:${clinicInfo.atendimento.fim.slice(2)}`,
+      },
     };
-
     clinicsData.push(newClinicInfos);
 
     const clinicsDataStringfy: string = JSON.stringify(clinicsData);
 
     localStorage.setItem('clinics', clinicsDataStringfy);
+
+    this.router.navigate(['/clinics']);
   }
 
   delete(clinicsInfos: ClinicsInfos[], clinicId: number) {

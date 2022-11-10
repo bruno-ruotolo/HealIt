@@ -10,7 +10,13 @@ import { registerLocaleData } from '@angular/common';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { AddClinicComponent } from './add-clinic/add-clinic.component';
+import { NgxMaskModule } from 'ngx-mask';
+import { MatSelectModule } from '@angular/material/select';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localePt, 'pt');
 
@@ -18,16 +24,29 @@ registerLocaleData(localePt, 'pt');
   declarations: [AppComponent, ClinicsComponent, AddClinicComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
+    MatIconModule,
+    MatInputModule,
     Ng2SearchPipeModule,
     FormsModule,
-    MatIconModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     {
       provide: DEFAULT_CURRENCY_CODE,
       useValue: 'BRL',
+    },
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { appearance: 'fill' },
+    },
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { floatLabel: 'always' },
     },
   ],
   bootstrap: [AppComponent],
