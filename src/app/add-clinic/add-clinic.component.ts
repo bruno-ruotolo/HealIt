@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-clinic.component.css'],
 })
 export class AddClinicComponent implements OnInit {
+  public customPatterns = { '0': { pattern: new RegExp('[0-9]') } };
   nome!: string;
   cnpj!: string;
   especialidade!: string;

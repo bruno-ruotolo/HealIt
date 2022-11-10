@@ -17,11 +17,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
-  declarations: [AppComponent, ClinicsComponent, AddClinicComponent],
+  declarations: [AppComponent, ClinicsComponent, AddClinicComponent, ScheduleComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -1,11 +1,12 @@
 <section>
-  <form (ngSubmit)="addClinic()">
+  <form ngNativeValidate (ngSubmit)="addClinic()">
     <input
       class="form-field_input"
       id="nome"
       placeholder="Nome Da Clínica"
       type="text"
       name="nome"
+      required
       [(ngModel)]="nome"
     />
 
@@ -16,6 +17,7 @@
       type="text"
       name="cnpj"
       [(ngModel)]="cnpj"
+      required
       mask="00.000.000/0000-00"
     />
 
@@ -25,6 +27,7 @@
       placeholder="Especialidade"
       type="text"
       name="especialidade"
+      required
       [(ngModel)]="especialidade"
     />
 
@@ -35,6 +38,7 @@
       type="text"
       name="telefone"
       [(ngModel)]="telefone"
+      required
       mask="(00) 0000-00000"
     />
 
@@ -45,6 +49,7 @@
       type="text"
       name="cep"
       [(ngModel)]="cep"
+      required
       mask="00000-000"
     />
 
@@ -54,6 +59,7 @@
       placeholder="Nome da Rua"
       type="text"
       name="endereco"
+      required
       [(ngModel)]="endereco"
     />
 
@@ -63,6 +69,7 @@
       placeholder="Número do Endereço"
       type="number"
       name="numero"
+      required
       [(ngModel)]="numero"
     />
 
@@ -72,6 +79,7 @@
       placeholder="Bairro"
       type="text"
       name="bairro"
+      required
       [(ngModel)]="bairro"
     />
 
@@ -81,6 +89,7 @@
       placeholder="Cidade"
       type="text"
       name="cidade"
+      required
       [(ngModel)]="cidade"
     />
 
@@ -90,13 +99,14 @@
       placeholder="Estado (Sigla)"
       type="text"
       name="estado"
+      required
       [(ngModel)]="estado"
       mask="AA"
     />
 
     <mat-form-field class="select">
       <mat-label>Selecione o Status</mat-label>
-      <mat-select [(ngModel)]="status" name="status">
+      <mat-select [(ngModel)]="status" name="status" required>
         <mat-option value="Ativo">Ativo</mat-option>
         <mat-option value="Inativo">Inativo</mat-option>
       </mat-select>
@@ -108,9 +118,8 @@
       placeholder="Preco"
       type="text"
       name="preco"
-      pattern="\d"
       required
-      pattern="\d"
+      mask="0*,00"
       [(ngModel)]="preco"
     />
 
@@ -122,6 +131,7 @@
         type="text"
         name="inicio"
         [(ngModel)]="inicio"
+        required
         mask="00:00"
       />
 
@@ -132,6 +142,7 @@
         type="text"
         name="fim"
         [(ngModel)]="fim"
+        required
         mask="00:00"
       />
     </div>
