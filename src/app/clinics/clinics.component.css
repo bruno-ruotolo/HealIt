@@ -1,0 +1,62 @@
+input {
+  margin: 50px 0;
+  width: 50%;
+  height: 30px;
+}
+
+.table {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.thead {
+  background-color: #e76076;
+  position: relative;
+  width: 100%;
+}
+
+.thead_content {
+  font-size: 25px;
+  font-family: "Josefin Sans", sans-serif;
+  width: 500px;
+  word-wrap: break-word;
+  padding: 20px 0;
+}
+
+.tbody_content_address {
+  width: 800px;
+  line-height: 20px;
+}
+
+.thead:after {
+  content: " ";
+  height: 2px;
+  background: rgb(0, 0, 0) 0000;
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+}
+
+.tbody_line {
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.tbody_content {
+  vertical-align: middle;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}

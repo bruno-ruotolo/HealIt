@@ -1,0 +1,42 @@
+<section>
+  <input type="text" [(ngModel)]="filterTerm" />
+  <table class="table">
+    <thead class="thead">
+      <th class="thead_content" *ngFor="let thead of clinicsThead">
+        {{ thead }}
+      </th>
+    </thead>
+    <tbody class="tbody">
+      <tr
+        class="tbody_line"
+        *ngFor="let clinic of clinicsInfos | filter: filterTerm"
+      >
+        <td class="tbody_content">
+          {{ clinic.nome }}
+        </td>
+        <td class="tbody_content">{{ clinic.cnpj }}</td>
+        <td class="tbody_content">
+          {{ clinic.especialidade }}
+        </td>
+        <td class="tbody_content">
+          {{ clinic.telefone }}
+        </td>
+        <td class="tbody_content tbody_content_address">
+          {{ clinic.endereco }}, {{ clinic.numero }}, {{ clinic.bairro }},
+          {{ clinic.cidade }}-{{ clinic.estado }};
+          {{ clinic.cep }}
+        </td>
+        <td class="tbody_content">{{ clinic.preco | currency }}</td>
+        <td class="tbody_content">
+          {{ clinic.status }}
+        </td>
+        <td class="tbody_content">
+          Das {{ clinic.atendimento.inicio }} ás {{ clinic.atendimento.fim }}
+          <mat-icon class="delete-icon" (click)="deleteClinic(clinic.id)"
+            >delete_forever</mat-icon
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

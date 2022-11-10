@@ -1,0 +1,150 @@
+<section>
+  <form (ngSubmit)="addClinic()">
+    <input
+      class="form-field_input"
+      id="nome"
+      placeholder="Nome Da Clínica"
+      type="text"
+      name="nome"
+      [(ngModel)]="nome"
+    />
+
+    <input
+      class="form-field_input"
+      id="cnpj"
+      placeholder="CNPJ"
+      type="text"
+      name="cnpj"
+      [(ngModel)]="cnpj"
+    />
+
+    <input
+      class="form-field_input"
+      id="especialidade"
+      placeholder="Especialidade"
+      type="text"
+      name="especialidade"
+      [(ngModel)]="especialidade"
+    />
+
+    <input
+      class="form-field_input"
+      id="telefone"
+      placeholder="Telefone"
+      type="text"
+      name="telefone"
+      [(ngModel)]="telefone"
+    />
+
+    <input
+      class="form-field_input"
+      id="cep"
+      placeholder="CEP"
+      type="text"
+      name="cep"
+      [(ngModel)]="cep"
+    />
+
+    <input
+      class="form-field_input"
+      id="nome"
+      placeholder="Nome da Rua"
+      type="text"
+      name="endereco"
+      [(ngModel)]="endereco"
+    />
+
+    <input
+      class="form-field_input"
+      id="numero"
+      placeholder="Número do Endereço"
+      type="number"
+      name="numero"
+      [(ngModel)]="numero"
+    />
+
+    <input
+      class="form-field_input"
+      id="bairro"
+      placeholder="Bairro"
+      type="text"
+      name="bairro"
+      [(ngModel)]="bairro"
+    />
+
+    <input
+      class="form-field_input"
+      id="cidade"
+      placeholder="Cidade"
+      type="text"
+      name="cidade"
+      [(ngModel)]="cidade"
+    />
+
+    <input
+      class="form-field_input"
+      id="estado"
+      placeholder="Estado (Sigla)"
+      type="text"
+      name="estado"
+      [(ngModel)]="estado"
+    />
+
+    <input
+      class="form-field_input"
+      id="status"
+      placeholder="Status"
+      type="text"
+      name="status"
+      [(ngModel)]="status"
+    />
+
+    <input
+      class="form-field_input"
+      id="preco"
+      placeholder="Preco"
+      type="text"
+      name="preco"
+      [(ngModel)]="preco"
+    />
+
+    <div>
+      <input
+        class="form-field_input"
+        id="inicio"
+        placeholder="Horario de Inicio do Atendimento"
+        type="text"
+        name="inicio"
+        [(ngModel)]="inicio"
+      />
+
+      <input
+        class="form-field_input"
+        id="fim"
+        placeholder="Horario de Fim do Atendimento"
+        type="text"
+        name="fim"
+        [(ngModel)]="fim"
+      />
+    </div>
+    <button type="submit">Adicionar</button>
+  </form>
+</section>
+
+<!-- "id": 7,
+"nome": "Laborial",
+"cnpj": "95.261.818/0001-74",
+"especialidade": "Exames Laboratóriais",
+"telefone": "3585214793",
+"cep": "65578971",
+"endereco": "Rua Manoel Pereira",
+"numero": 179,
+"bairro": "Centro",
+"cidade": "Água Doce do Maranhão",
+"estado": "MA",
+"status": "Ativo",
+"preco": 144.9,
+"atendimento": {
+  "inicio": "09:00",
+  "fim": "17:00"
+} -->
