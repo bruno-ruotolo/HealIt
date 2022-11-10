@@ -1,1 +1,14 @@
-<p>schedule works!</p>
+<section>
+  <h1>Agendamentos</h1>
+  <div class="schedules">
+    <article *ngFor="let schedule of scheduleInfos">
+      <h2>{{ schedule.nome }}</h2>
+      <p><span>Endereço: </span>{{ schedule.endereco }}</p>
+      <p><span>Nome do Paciente: </span>{{ schedule.paciente }}</p>
+      <div class="schedule-date">
+        <span>Data da Consulta: </span>
+        <p>{{ schedule.dia }} <span>ás</span> {{ schedule.hora }}</p>
+      </div>
+    </article>
+  </div>
+</section>

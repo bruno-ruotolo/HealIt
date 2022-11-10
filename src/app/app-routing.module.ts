@@ -1,3 +1,4 @@
+import { ScheduleComponent } from './schedule/schedule.component';
 import { AddClinicComponent } from './add-clinic/add-clinic.component';
 import { ClinicsComponent } from './clinics/clinics.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,7 @@ const routes: Routes = [
   },
   { path: 'clinics', component: ClinicsComponent },
   { path: 'add-clinic', component: AddClinicComponent },
+  { path: 'schedule', component: ScheduleComponent },
 ];
 
 @NgModule({

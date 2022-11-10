@@ -49,30 +49,3 @@ header h2:hover {
 
   filter: drop-shadow(3px 3px 2px #000000);
 }
-
-.add-clinic-button {
-  position: absolute;
-  border: none;
-  background-color: #e76076;
-  height: 70px;
-  width: 70px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  transition: 0.5s;
-}
-
-.add-clinic-button:hover {
-  transition: 0.5s;
-  transform: translate(-3px, -3px);
-
-  filter: drop-shadow(3px 3px 2px #000000);
-}
-
-.active {
-  display: none;
-}

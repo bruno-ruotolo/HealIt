@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ClinicService } from './../services/clinic.service';
 import { ClinicsInfos } from './../models/clinics.model';
 import { Component, Input, OnInit } from '@angular/core';
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./clinics.component.css'],
 })
 export class ClinicsComponent implements OnInit {
-  constructor(private clinicService: ClinicService) {}
+  constructor(private clinicService: ClinicService, private router: Router) {}
 
   filterTerm!: string;
   _clinicsInfos: ClinicsInfos[] = this.clinicService.get();
@@ -58,6 +59,10 @@ export class ClinicsComponent implements OnInit {
 
   deleteClinic(clinicId: number) {
     this.clinicService.delete(this._clinicsInfos, clinicId);
+  }
+
+  navigate() {
+    this.router.navigateByUrl('/add-clinic');
   }
 
   ngOnInit() {

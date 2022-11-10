@@ -1,4 +1,7 @@
 <section>
+  <button class="add-clinic-button" (click)="navigate()">
+    <mat-icon>add</mat-icon>
+  </button>
   <input type="text" placeholder="Pesquisar Clínica" [(ngModel)]="filterTerm" />
   <table class="table">
     <thead class="thead">
@@ -7,7 +10,10 @@
       </th>
     </thead>
     <tbody class="tbody">
-      <tr class="tbody_line" *ngFor="let clinic of clinicsInfos | filter: filterTerm">
+      <tr
+        class="tbody_line"
+        *ngFor="let clinic of clinicsInfos | filter: filterTerm"
+      >
         <td class="tbody_content">
           {{ clinic.nome }}
         </td>
@@ -29,7 +35,9 @@
         </td>
         <td class="tbody_content">
           Das {{ clinic.atendimento.inicio }} ás {{ clinic.atendimento.fim }}
-          <mat-icon class="delete-icon" (click)="deleteClinic(clinic.id)">delete_forever</mat-icon>
+          <mat-icon class="delete-icon" (click)="deleteClinic(clinic.id)"
+            >delete_forever</mat-icon
+          >
         </td>
       </tr>
     </tbody>

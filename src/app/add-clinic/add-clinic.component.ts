@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ClinicService } from '../services/clinic.service';
 import { ClinicsInfos } from './../models/clinics.model';
 import { Component, OnInit } from '@angular/core';
@@ -26,7 +27,10 @@ export class AddClinicComponent implements OnInit {
 
   selected: string = 'Ativo';
 
-  constructor(private addClinicService: ClinicService) {}
+  constructor(
+    private addClinicService: ClinicService,
+    private router: Router
+  ) {}
 
   addClinic() {
     const addClinicData: Omit<ClinicsInfos, 'id'> = {
