@@ -25,10 +25,7 @@ export class AddClinicComponent implements OnInit {
   inicio!: string;
   fim!: string;
 
-  constructor(
-    private addClinicService: ClinicService,
-    private router: Router
-  ) {}
+  constructor(private addClinicService: ClinicService) {}
 
   addClinic() {
     const addClinicData: Omit<ClinicsInfos, 'id'> = {

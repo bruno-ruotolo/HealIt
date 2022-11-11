@@ -24,7 +24,10 @@
   <table class="table">
     <thead class="thead">
       <th class="thead_content" *ngFor="let thead of clinicsThead">
-        {{ thead }}
+        <div class="thead_contente_icons">
+          <mat-icon class="thead_icons">{{ thead.icon }}</mat-icon>
+          <p>{{ thead.name }}</p>
+        </div>
       </th>
     </thead>
     <tbody class="tbody">
@@ -55,10 +58,10 @@
         </td>
         <td class="tbody_content">
           Das {{ clinic.atendimento.inicio }} ás {{ clinic.atendimento.fim }}
-          <mat-icon class="delete-icon" (click)="deleteClinic(clinic.id)"
-            >delete_forever</mat-icon
-          >
         </td>
+        <mat-icon class="delete-icon" (click)="deleteClinic(clinic.id)"
+          >delete_forever</mat-icon
+        >
       </tr>
     </tbody>
   </table>

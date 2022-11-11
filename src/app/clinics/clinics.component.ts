@@ -18,15 +18,15 @@ export class ClinicsComponent implements OnInit {
   name!: string;
 
   @Input() clinicsInfos: ClinicsInfos[] = this._clinicsInfos;
-  @Input() clinicsThead: string[] = [
-    'Nome',
-    'Cnpj',
-    'Especialidade',
-    'Telefone',
-    'Endereço',
-    'Preço',
-    'Status',
-    'Atendimento',
+  @Input() clinicsThead: { name: string; icon: string }[] = [
+    { name: 'Nome', icon: 'local_hospital' },
+    { name: 'Cnpj', icon: 'home' },
+    { name: 'Especialidade', icon: 'vpn_key' },
+    { name: 'Telefone', icon: 'local_phone' },
+    { name: 'Endereço', icon: 'place' },
+    { name: 'Preço', icon: 'attach_money' },
+    { name: 'Status', icon: 'notifications' },
+    { name: 'Atendimento', icon: 'watch_later' },
   ];
 
   handleClinicData(clinicsData: ClinicsInfos[]) {
