@@ -20,7 +20,15 @@ export class AppComponent {
 
     if (!clinicsStoredData) {
       const _clinicsInfos = JSON.stringify(clinicsData);
-      localStorage.setItem('clinics', _clinicsInfos);
+      const sortedClinics = JSON.parse(_clinicsInfos).sort(
+        (a: { nome: string }, b: { nome: string }) => {
+          const first = a.nome.toUpperCase();
+          const second = b.nome.toUpperCase();
+          return first == second ? 0 : first > second ? 1 : -1;
+        }
+      );
+
+      localStorage.setItem('clinics', JSON.stringify(sortedClinics));
     }
 
     if (!scheduleStoredData) {
@@ -43,9 +51,18 @@ export class AppComponent {
           bairro: clinicInfo?.bairro,
         });
       }
-      console.log('Modify', scheduleListModify);
+
       const _scheduleInfos = JSON.stringify(scheduleListModify);
-      localStorage.setItem('schedule', _scheduleInfos);
+
+      const sortedSchedule = JSON.parse(_scheduleInfos).sort(
+        (a: { paciente: string }, b: { paciente: string }) => {
+          const first = a.paciente.toUpperCase();
+          const second = b.paciente.toUpperCase();
+          return first == second ? 0 : first > second ? 1 : -1;
+        }
+      );
+
+      localStorage.setItem('schedule', JSON.stringify(sortedSchedule));
     }
   }
 }

@@ -11,8 +11,6 @@ export class ScheduleComponent implements OnInit {
   patient!: string;
   clinic!: string;
   filterTerm!: string;
-  patientList: string[] = [];
-  clinicsList: string[] = [];
 
   constructor(private scheduleService: ScheduleService) {}
   _scheduleInfos: ScheduleInfos[] = this.scheduleService.get();
@@ -20,19 +18,27 @@ export class ScheduleComponent implements OnInit {
   @Input() scheduleInfos: ScheduleInfos[] = this._scheduleInfos;
 
   getPatientList() {
-    this._scheduleInfos.forEach((schedule) => {
-      this.patientList?.push(schedule.paciente);
+    const patientsArr: string[] = [];
+    this._scheduleInfos?.forEach((schedule) => {
+      patientsArr.push(schedule.paciente);
     });
+
+    const uniquePatientsList = Array.from([...new Set(patientsArr)]);
+    return uniquePatientsList;
   }
 
   getClinicsList() {
+    const clinicsArr: string[] = [];
     this._scheduleInfos.forEach((schedule) => {
-      this.clinicsList?.push(schedule.nome as string);
+      clinicsArr.push(schedule.nome as string);
     });
+
+    const uniqueClinicsList = Array.from([...new Set(clinicsArr)]);
+    return uniqueClinicsList;
   }
 
-  ngOnInit(): void {
-    this.getPatientList();
-    this.getClinicsList();
-  }
+  patientList: string[] = this.getPatientList();
+  clinicsList: string[] = this.getClinicsList();
+
+  ngOnInit(): void {}
 }

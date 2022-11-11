@@ -16,7 +16,6 @@ export class ClinicsComponent implements OnInit {
   _clinicsInfos: ClinicsInfos[] = this.clinicService.get();
   animal!: string;
   name!: string;
-  specialtyList: string[] = [];
 
   @Input() clinicsInfos: ClinicsInfos[] = this._clinicsInfos;
   @Input() clinicsThead: string[] = [
@@ -67,14 +66,18 @@ export class ClinicsComponent implements OnInit {
     this.router.navigateByUrl('/add-clinic');
   }
 
-  getClinicsList() {
+  getEspecialityList() {
+    const specialtyArr: string[] = [];
     this._clinicsInfos.forEach((clinic) => {
-      this.specialtyList?.push(clinic.especialidade as string);
+      specialtyArr.push(clinic.especialidade as string);
     });
+
+    const uniqueEspecialtyList = Array.from([...new Set(specialtyArr)]);
+
+    return uniqueEspecialtyList;
   }
 
-  ngOnInit() {
-    this.getClinicsList();
-    console.table(this._clinicsInfos);
-  }
+  specialtyList: string[] = this.getEspecialityList();
+
+  ngOnInit() {}
 }

@@ -40,7 +40,6 @@ export class ClinicService {
   }
 
   add(clinicInfo: Omit<ClinicsInfos, 'id'>) {
-    console.log('Entrei');
     const clinicsData: ClinicsInfos[] = JSON.parse(
       localStorage.getItem('clinics') as string
     );

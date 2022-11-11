@@ -28,7 +28,6 @@ export class ScheduleService {
             .replace(/(-\d{4})\d+?$/, '$1'),
       });
     }
-    console.log(_scheduleInfos);
     return _scheduleInfos;
   }
 }

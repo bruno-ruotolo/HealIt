@@ -50,7 +50,6 @@ export class AddClinicComponent implements OnInit {
       },
     };
     this.addClinicService.add(addClinicData);
-    console.log('Solicitada nova adição');
   }
 
   ngOnInit(): void {}
