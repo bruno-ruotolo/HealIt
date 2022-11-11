@@ -1,6 +1,6 @@
 <br />
 <div align="center">
-    <h3 align="center">HelaIt</h3>
+    <img src="./assets/healit.png" alt="HealIt Logo" width="300">
     <p> The health manager
 </div>
 
