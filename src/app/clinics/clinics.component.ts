@@ -12,9 +12,11 @@ export class ClinicsComponent implements OnInit {
   constructor(private clinicService: ClinicService, private router: Router) {}
 
   filterTerm!: string;
+  specialty!: string;
   _clinicsInfos: ClinicsInfos[] = this.clinicService.get();
   animal!: string;
   name!: string;
+  specialtyList: string[] = [];
 
   @Input() clinicsInfos: ClinicsInfos[] = this._clinicsInfos;
   @Input() clinicsThead: string[] = [
@@ -65,7 +67,14 @@ export class ClinicsComponent implements OnInit {
     this.router.navigateByUrl('/add-clinic');
   }
 
+  getClinicsList() {
+    this._clinicsInfos.forEach((clinic) => {
+      this.specialtyList?.push(clinic.especialidade as string);
+    });
+  }
+
   ngOnInit() {
+    this.getClinicsList();
     console.table(this._clinicsInfos);
   }
 }

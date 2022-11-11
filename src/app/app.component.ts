@@ -36,6 +36,11 @@ export class AppComponent {
           nome: clinicInfo?.nome,
           telefone: clinicInfo?.telefone,
           endereco: clinicInfo?.endereco,
+          cep: clinicInfo?.cep,
+          numero: clinicInfo?.numero,
+          cidade: clinicInfo?.cidade,
+          estado: clinicInfo?.estado,
+          bairro: clinicInfo?.bairro,
         });
       }
       console.log('Modify', scheduleListModify);

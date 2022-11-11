@@ -110,3 +110,15 @@ input {
 
   filter: drop-shadow(3px 3px 2px #000000);
 }
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.select {
+  width: 300px;
+  font-size: 20px;
+}

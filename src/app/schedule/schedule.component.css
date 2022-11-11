@@ -60,8 +60,22 @@ p {
   font-family: "Arvo", serif;
   font-weight: 800;
   color: #3d234e;
+  line-height: 20px;
 }
 
 .schedule-date p {
   margin-top: 5px;
+}
+
+.filters-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.select {
+  font-size: 20px;
+  width: 300px;
 }

@@ -1,4 +1,3 @@
-import { NumberFormatStyle } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { ScheduleInfos } from '../models/schedule.model';
 
@@ -27,7 +26,6 @@ export class ScheduleService {
             .replace(/(\d{2})(\d)/, '($1) $2')
             .replace(/(\d{5})(\d)/, '$1-$2')
             .replace(/(-\d{4})\d+?$/, '$1'),
-        // TODO: ADICIONAR O NUMERO CEP CIDADE E ESTADO
       });
     }
     console.log(_scheduleInfos);

@@ -4,6 +4,7 @@ main {
 }
 
 header {
+  z-index: 3;
   background-color: #b24686;
   position: fixed;
   top: 0;
@@ -11,7 +12,6 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-self: center;
   padding: 0 70px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -28,9 +28,7 @@ header h1 {
 }
 
 header h2 {
-  position: absolute;
-  left: 0;
-  right: 7%;
+  position: relative;
   margin: 0 auto;
   font-family: "Arvo", serif;
   font-style: normal;

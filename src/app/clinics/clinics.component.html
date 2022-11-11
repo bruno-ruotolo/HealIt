@@ -2,7 +2,25 @@
   <button class="add-clinic-button" (click)="navigate()">
     <mat-icon>add</mat-icon>
   </button>
-  <input type="text" placeholder="Pesquisar Clínica" [(ngModel)]="filterTerm" />
+
+  <div class="filters">
+    <input
+      type="text"
+      placeholder="Pesquisar Clínica"
+      [(ngModel)]="filterTerm"
+    />
+    <mat-form-field class="select">
+      <mat-label>Selecione uma Especialidade</mat-label>
+      <mat-select [(ngModel)]="specialty" name="specialty">
+        <mat-option>Nenhum</mat-option>
+        <mat-option
+          *ngFor="let specialty of specialtyList"
+          [value]="specialty"
+          >{{ specialty }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+  </div>
   <table class="table">
     <thead class="thead">
       <th class="thead_content" *ngFor="let thead of clinicsThead">
@@ -12,7 +30,9 @@
     <tbody class="tbody">
       <tr
         class="tbody_line"
-        *ngFor="let clinic of clinicsInfos | filter: filterTerm"
+        *ngFor="
+          let clinic of clinicsInfos | filter: filterTerm | filter: specialty
+        "
       >
         <td class="tbody_content">
           {{ clinic.nome }}

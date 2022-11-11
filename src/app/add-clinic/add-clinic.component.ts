@@ -20,12 +20,10 @@ export class AddClinicComponent implements OnInit {
   bairro!: string;
   cidade!: string;
   estado!: string;
-  status!: string;
+  status: string = 'Ativo';
   preco!: string;
   inicio!: string;
   fim!: string;
-
-  selected: string = 'Ativo';
 
   constructor(
     private addClinicService: ClinicService,

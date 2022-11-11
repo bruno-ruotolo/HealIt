@@ -8,12 +8,31 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./schedule.component.css'],
 })
 export class ScheduleComponent implements OnInit {
+  patient!: string;
+  clinic!: string;
+  filterTerm!: string;
+  patientList: string[] = [];
+  clinicsList: string[] = [];
+
   constructor(private scheduleService: ScheduleService) {}
   _scheduleInfos: ScheduleInfos[] = this.scheduleService.get();
 
   @Input() scheduleInfos: ScheduleInfos[] = this._scheduleInfos;
 
+  getPatientList() {
+    this._scheduleInfos.forEach((schedule) => {
+      this.patientList?.push(schedule.paciente);
+    });
+  }
+
+  getClinicsList() {
+    this._scheduleInfos.forEach((schedule) => {
+      this.clinicsList?.push(schedule.nome as string);
+    });
+  }
+
   ngOnInit(): void {
-    console.table(this._scheduleInfos);
+    this.getPatientList();
+    this.getClinicsList();
   }
 }

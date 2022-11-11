@@ -1,9 +1,36 @@
 <section>
   <h1>Agendamentos</h1>
+
+  <div class="filters-div">
+    <mat-form-field class="select">
+      <mat-label>Selecione um Paciente</mat-label>
+      <mat-select [(ngModel)]="patient" name="patient">
+        <mat-option>Nenhum</mat-option>
+        <mat-option *ngFor="let patient of patientList" [value]="patient">{{
+          patient
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="select">
+      <mat-label>Selecione uma Clínica</mat-label>
+      <mat-select [(ngModel)]="clinic" name="clinic">
+        <mat-option>Nenhum</mat-option>
+        <mat-option *ngFor="let clinic of clinicsList" [value]="clinic">{{
+          clinic
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
   <div class="schedules">
-    <article *ngFor="let schedule of scheduleInfos">
+    <article
+      *ngFor="let schedule of scheduleInfos | filter: patient | filter: clinic"
+    >
       <h2>{{ schedule.nome }}</h2>
-      <p><span>Endereço: </span>{{ schedule.endereco }}</p>
+      <p>
+        <span>Endereço: </span>{{ schedule.endereco }}, {{ schedule.numero }},
+        {{ schedule.bairro }}, {{ schedule.cidade }}-{{ schedule.estado }};
+        {{ schedule.cep }}
+      </p>
       <p><span>Nome do Paciente: </span>{{ schedule.paciente }}</p>
       <div class="schedule-date">
         <span>Data da Consulta: </span>
