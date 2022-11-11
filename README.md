@@ -1,27 +1,57 @@
-# DesafioSalu
+<br />
+<div align="center">
+    <h3 align="center">HelaIt</h3>
+    <p> The health manager
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+# About
+Project completed as part of Salú's challenge, which was proposed to create a clinic and scheduling manager
 
-## Development server
+<hr></hr>
+<h3>Desktop Layout</h3> 
+  <img src="/assets/healit.gif" />
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<hr></hr>
+<h3>Mobile Layout</h3> 
+  <img src="/assets/healitmobile.gif" />
 
-## Code scaffolding
+## Technologies 💻
+These are the main tools, frameworks and languages that were used in this project:<br>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Front-End
+<div>
+  <img style='margin: 5px;' src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img style='margin: 5px;' src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/>
+ <img style='margin: 5px;' src="https://img.shields.io/badge/typescript-%233178C6.svg?&style=for-the-badge&logo=typescript&logoColor=white" />
+  <img style='margin: 5px;' src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white"/>
 
-## Build
+</div>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## How to Run 🏃‍♀️
 
-## Running unit tests
+You can acess this project by cloning this repository. To clone it, run the following command:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```git
+git clone https://github.com/bruno-ruotolo/HealIt.git
+```
 
-## Running end-to-end tests
+_Note: This command use the `HTTPS` to clone the project, you can clone it using the `SSH protocol` or `GitHub Cli`, following the [GitHub clone guide](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository)_
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Then, navigate to the project folder and run the following command to install the dependencies:
 
-## Further help
+```git
+npm i
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Finally browse to the project main folder, now you can run the `angular server command` to access the webpage:
+
+```cmd
+ng s -o
+```
+
+## Authors
+### Bruno Ruotolo
+
+[![GitHub](https://img.shields.io/badge/-BrunoRuotolo-black?style=for-the-badge&logo=github&logoColor=white&link=https://github.com/bruno-ruotolo/)]([https://www.linkedin.com/in/bruno-amaral-ruotolo-295876186/](https://github.com/bruno-ruotolo/))
+[![Gmail Badge](https://img.shields.io/badge/-brunoaruotolo@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:)](mailto:brunoaruotolo@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/-brunoamaralruotolo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/bruno-amaral-ruotolo-295876186/)](https://www.linkedin.com/in/bruno-amaral-ruotolo-295876186/)
