@@ -1,6 +1,6 @@
 <br />
 <div align="center">
-    <img src="./assets/healit.png" alt="HealIt Logo" width="300">
+    <img src="/.github/healit.png" alt="HealIt Logo" width="300">
     <p> The health manager
 </div>
 
@@ -9,11 +9,11 @@ Project completed as part of Salú's challenge, which was proposed to create a c
 
 <hr></hr>
 <h3>Desktop Layout</h3> 
-  <img src="/assets/healit.gif" />
+  <img src="/.github/healit.gif" />
 
 <hr></hr>
 <h3>Mobile Layout</h3> 
-  <img src="/assets/healitmobile.gif" />
+  <img src="/.github/healitmobile.gif" />
 
 ## Technologies 💻
 These are the main tools, frameworks and languages that were used in this project:<br>
